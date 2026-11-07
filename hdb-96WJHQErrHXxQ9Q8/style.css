@@ -457,6 +457,10 @@ section{padding:52px 0 6px}
 #v-story .pdf-dl .d{color:var(--ink2);font-size:.9rem;flex:1;min-width:220px}
 #v-story .pdf-dl a.btn{display:inline-block;background:var(--navy-deep);color:#fff;text-decoration:none;font-weight:900;font-size:.92rem;border-radius:999px;padding:11px 22px}
 #v-story .pdf-dl a.btn:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+#v-horizon .pdf-dl .t{font-weight:900;font-family:"Shippori Mincho B1",serif;font-size:1.05rem}
+#v-horizon .pdf-dl .d{color:var(--ink2);font-size:.9rem;flex:1;min-width:220px}
+#v-horizon .pdf-dl a.btn{display:inline-block;background:#0f766e;color:#fff;text-decoration:none;font-weight:900;font-size:.92rem;border-radius:999px;padding:11px 22px}
+#v-horizon .pdf-dl a.btn:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 #v-story footer{padding:26px 0 44px;color:var(--muted);font-size:.82rem}
 #v-story footer p+p{margin-top:6px}
 #v-story /* ---------- university lists ---------- */
@@ -660,7 +664,8 @@ section{padding:52px 0 6px}
 #v-horizon .stage h3{font-size:1.12rem;font-weight:800;margin-bottom:6px}
 #v-horizon .stage p{color:var(--ink2);font-size:.96rem}
 #v-horizon .foot{margin:44px 0 0;border-top:1px solid var(--line);padding:18px 0 40px;color:var(--muted);font-size:.83rem;line-height:1.7}
-@media print{#v-horizon *{box-shadow:none!important}
+@media print{#v-horizon .pdf-dl{display:none!important}
+#v-horizon *{box-shadow:none!important}
 #v-horizon .stage,#v-horizon .quote{break-inside:avoid}
 #v-horizon{background:#fff}
 

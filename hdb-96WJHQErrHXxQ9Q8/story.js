@@ -610,6 +610,11 @@ const STORY_HTML2 = `<div class="wrap">
     <circle cx="560" cy="48" r="4" fill="#0f766e" opacity=".7"/>
     <circle cx="830" cy="20" r="6" fill="#c07f1f"/>
   </svg>
+    <div class="pdf-dl">
+      <span class="t">配布用PDF</span>
+      <span class="d">印刷して配れるA4版も用意しました。海外研修・留学と受け入れのプログラムの段階と、部に託したい思いまで含めた全4ページです。</span>
+      <a class="btn" href="https://drive.google.com/file/d/1D0qIxUxb-v5jkbFfLGuAv5__HwyIz3R7/view" download>PDFをダウンロード（A4・全4ページ）</a>
+    </div>
 </header>
 
 <section>
