@@ -193,6 +193,7 @@ function printCard(id){
   const dlg = $("#dlg"); if(dlg && dlg.open) dlg.close();
   let pa = $("#print-area");
   if(!pa){ pa = document.createElement("div"); pa.id = "print-area"; document.body.appendChild(pa); }
+  pa.style.maxWidth = "";
   pa.innerHTML = `<div class="print-help">🖨 印刷用レイアウトを表示しています。<button type="button" onclick="window.print()">🖨 印刷する</button><button type="button" onclick="exitPrintMode()">← ダッシュボードに戻る</button></div>` + cardDetailHtml(c);
   document.body.classList.add("printing-card");
   window.scrollTo(0, 0);
@@ -209,7 +210,7 @@ function printYear(){
   document.body.classList.add("printing-card");
   window.scrollTo(0, 0);
 }
-function exitPrintMode(){ document.body.classList.remove("printing-card"); }
+function exitPrintMode(){ document.body.classList.remove("printing-card"); const pa = $("#print-area"); if(pa) pa.style.maxWidth = ""; }
 window.addEventListener("afterprint", () => document.body.classList.remove("printing-card"));
 document.addEventListener("click", e => { const b = e.target.closest("[data-print]"); if(b){ e.preventDefault(); e.stopPropagation(); printCard(b.dataset.print); } }, true);
 function cardDetailHtml(c){
@@ -382,8 +383,24 @@ function renderSrc(){
 }
 
 const STORY_SWITCH = sub => (DATA.key === "kokusai" && typeof STORY_HTML2 !== "undefined") ? `<div class="story-switch"><button data-ss="story" class="${sub === "story" ? "on" : ""}">🧭 英語の道のり</button><button data-ss="horizon" class="${sub === "horizon" ? "on" : ""}">🌏 世界に視野を広げる</button></div>` : "";
+const STORY_TOOLS = sub => `<div class="story-tools"><button type="button" onclick="printStory('${sub}')">🖨 この物語の印刷用レイアウトを表示</button></div>`;
+function printStory(sub){
+  const srcEl = document.getElementById(sub === "horizon" ? "v-horizon" : "v-story");
+  if(!srcEl) return;
+  const clone = srcEl.cloneNode(true);
+  clone.querySelectorAll(".story-switch,.story-tools").forEach(el => el.remove());
+  clone.querySelectorAll("[hidden]").forEach(el => el.removeAttribute("hidden"));
+  clone.querySelectorAll("details").forEach(el => el.setAttribute("open",""));
+  let pa = $("#print-area");
+  if(!pa){ pa = document.createElement("div"); pa.id = "print-area"; document.body.appendChild(pa); }
+  pa.style.maxWidth = "1060px";
+  pa.innerHTML = `<div class="print-help">🖨 印刷用レイアウトを表示しています。<button type="button" onclick="window.print()">🖨 印刷する</button><button type="button" onclick="exitPrintMode()">← ダッシュボードに戻る</button></div>`;
+  pa.appendChild(clone);
+  document.body.classList.add("printing-card");
+  window.scrollTo(0, 0);
+}
 // 本文は story.js の STORY_HTML
-function renderStory(){ $("#v-story").innerHTML = STORY_SWITCH("story") + STORY_HTML; initRoadmap(); }
+function renderStory(){ $("#v-story").innerHTML = STORY_SWITCH("story") + STORY_TOOLS("story") + STORY_HTML; initRoadmap(); }
 // 「英語の道のり」の対話要素（学年タブ・大学リストの絞り込み）。単体ページのスクリプトを #v-story 内に閉じて動かす。
 function initRoadmap(){
   const root = $("#v-story"); if(!root) return;
@@ -438,7 +455,7 @@ function initRoadmap(){
   }
 }
 // 本文は story.js の STORY_HTML2（国際のみ）
-function renderHorizon(){ const el = $("#v-horizon"); if(el && typeof STORY_HTML2 !== "undefined") el.innerHTML = STORY_SWITCH("horizon") + STORY_HTML2; }
+function renderHorizon(){ const el = $("#v-horizon"); if(el && typeof STORY_HTML2 !== "undefined") el.innerHTML = STORY_SWITCH("horizon") + STORY_TOOLS("horizon") + STORY_HTML2; }
 
 // テーマ切替
 $("#theme").addEventListener("click", () => {

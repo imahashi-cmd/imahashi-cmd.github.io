@@ -825,3 +825,7 @@ table.yt td.yt-card{white-space:normal}
 .story-switch button{border:1.5px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;font-weight:600;padding:8px 16px;cursor:pointer;border-radius:999px;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.07)}
 .story-switch button:hover{border-color:var(--accent);color:var(--accent)}
 .story-switch button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.story-tools{display:flex;justify-content:flex-end;margin:0 0 14px}
+.story-tools button{border:1.5px solid var(--accent);background:var(--panel);color:var(--accent);font:inherit;font-weight:700;padding:8px 16px;cursor:pointer;border-radius:999px;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.07)}
+.story-tools button:hover{background:var(--accent);color:#fff}
+@media print{.story-tools,.story-switch{display:none!important}}
