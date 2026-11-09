@@ -596,14 +596,15 @@ const STORY_HTML = `<header class="hero">
   </footer>
 </main>`;
 
-const STORY_HTML2 = `<div class="wrap">
+const STORY_HTML2 = `
+<div class="wrap">
 
-<header class="hero">
-  <div class="hero-kicker">国際教育推進部のストーリー</div>
-  <h1>世界に<span class="accent">視野</span>を広げる</h1>
-  <div class="en">Widening Horizons — The Story of the International Education Department</div>
-  <p class="lead">海外研修・留学と、外国の生徒や人々の受け入れを通して、生徒の視野を日本国内にとどめず世界へ広げる。異なる文化や人の考え方に触れることを大事にする、国際教育推進部のもう一つの物語です。英語の力の伸びを語る「英語の道のり」に対して、こちらは<strong>経験と視野の物語</strong>です。</p>
-  <svg class="route" viewBox="0 0 840 90" width="100%" height="90" aria-hidden="true">
+  <header class="hero">
+    <div class="hero-kicker">東洋大学京北中学高等学校　国際教育推進部</div>
+    <h1>世界に<span class="accent">視野</span>を広げる</h1>
+    <p class="en">Widening Our View of the World</p>
+    <p class="lead">本校の国際教育には、2つの物語があります。英語の力の伸びを語る「英語の道のり」と、もう1つがこのページです。<strong>行く・迎える・つながる</strong>経験を通して、生徒の視野を日本の中だけに閉じないこと。それが、本校の国際教育が目指すものです。</p>
+    <svg class="route" viewBox="0 0 840 90" width="100%" height="90" aria-hidden="true">
     <path d="M10,78 C 200,20 420,86 620,34 S 800,26 830,20" fill="none" stroke="#0f766e" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round" opacity=".65"/>
     <circle cx="10" cy="78" r="5" fill="#0f766e"/>
     <circle cx="300" cy="52" r="4" fill="#0f766e" opacity=".7"/>
@@ -612,93 +613,184 @@ const STORY_HTML2 = `<div class="wrap">
   </svg>
     <div class="pdf-dl">
       <span class="t">配布用PDF</span>
-      <span class="d">印刷して配れるA4版も用意しました。海外研修・留学と受け入れのプログラムの段階と、部に託したい思いまで含めた全4ページです。</span>
-      <a class="btn" href="https://drive.google.com/file/d/1D0qIxUxb-v5jkbFfLGuAv5__HwyIz3R7/view" download>PDFをダウンロード（A4・全4ページ）</a>
+      <span class="d">印刷して配れるA4版も用意しました。プログラムの段階と、費用・募集時期の目安まで含めた全6ページです。</span>
+      <a class="btn" href="https://drive.google.com/file/d/1D0qIxUxb-v5jkbFfLGuAv5__HwyIz3R7/view" download>PDFをダウンロード（A4・全6ページ）</a>
     </div>
-</header>
+    <div class="hero-band">
+      <p class="big">英語は、ゴールではなく手段。<br>世界の中で自分の考えを持ち、異なる文化や考え方を持つ人々と向き合える人に。</p>
+      <p class="small">検定のスコアは力の物差しです。しかし本当のゴールは、生徒が世界へ一歩を踏み出し、自分の言葉で語れるようになることです。</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="num">中3<small>・全員</small></div><div class="lbl">中学の集大成として、全員がカナダ修学旅行へ</div></div>
+      <div class="fact"><div class="num">6<small>年間</small></div><div class="lbl">中1のキャンプから長期留学まで、段階を追って世界へ</div></div>
+      <div class="fact hl"><div class="num">オランダ</div><div class="lbl">看板プログラム。英語でプレゼンテーションと哲学対話</div></div>
+      <div class="fact"><div class="num">1<small>年間</small></div><div class="lbl">アイルランドの現地校に身を置く長期留学（第1期生は2026年出発）</div></div>
+    </div>
+  </header>
 
-<section>
-  <div class="sec-head"><span class="no">01</span><h2>出発点</h2></div>
-  <div class="prose">
-    <p>国際教育推進部の仕事の出発点には、「幸福な社会の実現」というテーマがある。未来の社会を考え、新しい価値を生む発想力を持った生徒を育てる。そのためには教室の中だけでは足りない。生徒を外へ、世界へ連れ出すことが必要だった。</p>
+  <section aria-labelledby="why-h">
+    <div class="sec-head">
+      <div class="no">01</div>
+      <h2 id="why-h">なぜ、生徒を「外へ」連れ出すのか</h2>
+    </div>
+    <div class="story">
+      <div class="card main">
+        <p>本校の教育のテーマは、<strong>「幸福な社会の実現」</strong>です。未来の社会を考え、新しい価値を生む発想力を持った生徒を育てる。そのためには、教室の中だけでは足りません。生徒を外へ、世界へ連れ出すことが必要です。</p>
+        <p>プログラムは、距離と深さの段階になっています。国内での国際交流から始まり、短期の海外プログラム、そして長期の留学へ。積み上げた経験と力は、やがて一つの姿になります。</p>
+        <p>英語の力の伸びと進路については、もう1つの物語<strong>「英語の道のり」</strong>でご紹介しています。こちらは、経験と視野の物語です。</p>
+      </div>
+      <div class="side">
+        <h3>この物語のキーワード</h3>
+        <ul>
+          <li><b>行く</b> ― 段階を追って、海外へ</li>
+          <li><b>迎える</b> ― 海外の学生や訪問者を校内に</li>
+          <li><b>つながる</b> ― オンライン交流で、遠くの学校と</li>
+          <li><b>英語は手段</b> ― 自分の考えを伝えるために</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="steps-h">
+    <div class="sec-head">
+      <div class="no">02</div>
+      <h2 id="steps-h">段階を追って、世界へ</h2>
+      <p>入口は国内にあります。全員で経験する行事と、希望者が挑むプログラムを組み合わせ、無理なく一歩ずつ進みます。</p>
+    </div>
+    <div class="stages">
+      <div class="stage">
+        <div class="when"><div class="grade">中1</div><div class="kind">全員</div></div>
+        <div class="body">
+          <span class="tag">国内・英語キャンプ</span>
+          <h3>フレッシュマン・イングリッシュ・キャンプ</h3>
+          <p>留学生と少人数のグループで英語で過ごし、異文化理解に触れる、国際教育の入口です。</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="when"><div class="grade">中2</div><div class="kind">全員・希望者</div></div>
+        <div class="body">
+          <span class="tag">国内・英語キャンプ</span>
+          <h3>ブーストアップ・イングリッシュ・キャンプ（ブリティッシュヒルズ）</h3>
+          <p>中1の経験を受けて、英語で過ごす力をもう一段伸ばします。TOKYO GLOBAL GATEWAY での事前学習も経て、中3のカナダへつなげます。</p>
+          <p style="margin-top:8px"><span class="tag">希望者・海外</span></p>
+          <h3>アイルランド・サマープログラム（中2・中3）</h3>
+          <p>ダブリンの語学学校で、ヨーロッパの生徒との混成クラスに学び、ホームステイをします。英語の学習と異文化体験に加えて、アイルランド1年留学のイメージをつかむ機会にもなります。</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="when"><div class="grade">中3</div><div class="kind">全員</div></div>
+        <div class="body">
+          <span class="tag">海外・修学旅行</span>
+          <h3>カナダ修学旅行</h3>
+          <p>「中学最終学年として英語学習の集大成」。ホームステイと現地校との交流で、英語を使った生のコミュニケーションを経験し、異文化理解と今後の学習意欲につなげます。</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="when"><div class="grade">高1・高2</div><div class="kind">希望者</div></div>
+        <div class="body">
+          <span class="tag">希望者・海外</span>
+          <h3>オレゴン・サマープログラム</h3>
+          <p>他国の家庭で暮らして、日常英会話の力を伸ばすプログラムです。異文化理解を深めながら日本文化を相対的に見る視点を養い、他国の文化に敬意を払う態度を育てます。</p>
+        </div>
+      </div>
+      <div class="stage flag">
+        <div class="when"><div class="grade">高校</div><div class="kind">希望者</div></div>
+        <div class="body">
+          <span class="tag">看板プログラム</span>
+          <h3>オランダプログラム</h3>
+          <p>本校の国際教育の看板であり、目指す姿の最終ゴールのイメージです。語学研修でも、観光でも、ホームステイ体験でもありません。生徒は「2050年問題」をテーマに英語でプレゼンテーションをし、現地の講師や学生と哲学対話をします。自分の考えを持ち、異なる価値観を持つ相手と英語で対話できること。他のプログラムで積み上げた経験と力が、ここで一つの姿になります。</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="when"><div class="grade">高校</div><div class="kind">希望者</div></div>
+        <div class="body">
+          <span class="tag">長期留学</span>
+          <h3>アイルランド1年留学</h3>
+          <p>現地の高校の「トランジションイヤー」（入試に縛られず、探究や職場体験をする移行学年）に1年間身を置きます。国際経験と、自立・挑戦の機会をつくる留学です。英語力の到達目標は、ケンブリッジ英語検定でB2、英検で準1級相当。第1期生2名が2026年に出発しました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="welcome-h">
+    <div class="sec-head">
+      <div class="no">03</div>
+      <h2 id="welcome-h">迎える、つながる</h2>
+      <p>行くだけではありません。校内にいながら、異なる文化や人の考え方に触れる機会も大切にしています。</p>
+    </div>
+    <div class="duo">
+      <div class="card">
+        <h3>迎える</h3>
+        <p>香港都会大学の学生の訪問を受け入れるなど、海外の大学や学校から訪問者が来校し、生徒と交流することがあります。迎える側になることで、自分の学校や文化を相手の目で見直す経験にもなります。</p>
+      </div>
+      <div class="card">
+        <h3>つながる</h3>
+        <p>インドネシアの高校とは、オンラインでの交流を行い、将来の相互訪問へつなげる構想を進めています。距離があっても、つながり続けることで視野は広がります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="change-h">
+    <div class="sec-head">
+      <div class="no">04</div>
+      <h2 id="change-h">生徒に起きること</h2>
+    </div>
+    <div class="quote">
+      <p class="q">「オランダに帰りたい」――生徒のこの言葉が、この仕事を続ける理由です。</p>
+      <p>オランダでの夜の振り返りでは、生徒の「心のドア」が少しずつ開き、普段は恥ずかしくて言えないことを語り始め、涙する生徒もいます。現地で英語が通じ、歓迎されたという経験は、新しいことに挑むときの「根拠なき自信」になります。数字では測れないこの変化こそ、国際教育の成果だと私たちは考えています。</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="join-h">
+    <div class="sec-head">
+      <div class="no">05</div>
+      <h2 id="join-h">参加のしかた</h2>
+    </div>
+    <div class="card" style="padding:28px">
+      <h3 class="subh">募集の時期（目安）</h3>
+      <p style="color:var(--ink2)">希望者向けの海外研修（アイルランド・サマー、オレゴン・サマー、オランダ）は、例年、<b>2月末に告知</b>し、<b>3月に募集説明会</b>、<b>4月中旬に申込締切</b>という流れです（新入生・高校からの入学者は4月下旬が締切です）。オランダプログラムは、この後に面接（4〜5月）があり、参加者は5月に決まります。アイルランド1年留学は、<b>中学3年の6月</b>に募集説明会を開き、夏にかけて選考します。全員で参加する行事（中1・中2の英語キャンプ、中3のカナダ修学旅行）は学年の行事として実施するため、募集はありません。</p>
+      <h3 class="subh">費用の目安（生徒1人あたり）</h3>
+      <table class="costs">
+        <tr><th>中1 イングリッシュ・キャンプ（全員）</th><td class="amt">約4.8万円</td><td>諸経費として徴収します</td></tr>
+        <tr><th>中2 イングリッシュ・キャンプ（全員）</th><td class="amt">約7.6万円</td><td>ブリティッシュヒルズでの実施</td></tr>
+        <tr><th>中3 カナダ修学旅行（全員）</th><td class="amt">積立金で徴収</td><td>燃油価格の高騰などにより、追加の徴収をお願いする場合があります（2026年度は1人4万円）</td></tr>
+        <tr><th>アイルランド・サマー（中2・中3）</th><td class="amt">約55〜57万円</td><td>燃油サーチャージ・海外保険は別途</td></tr>
+        <tr><th>オレゴン・サマー（高1・高2）</th><td class="amt">約63〜66万円</td><td>参加人数により変動。燃油サーチャージ・海外保険は別途</td></tr>
+        <tr><th>オランダプログラム（高校）</th><td class="amt">60万円台</td><td>哲学対話と英語プレゼンテーションの看板プログラム</td></tr>
+        <tr><th>アイルランド1年留学（高1）</th><td class="amt">総額 約550万円</td><td>東京都私学財団の留学助成（1人155万円）があり、実質の負担は約400万円が目安です</td></tr>
+      </table>
+      <p class="note">金額は2026年度の実績（アイルランド1年留学は2027〜28年度の概算）です。為替や燃油価格などにより年度ごとに変動します。正確な金額は、各プログラムの募集説明会でご案内します。</p>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <div class="sec-head">
+      <div class="no">06</div>
+      <h2 id="faq-h">よくあるご質問</h2>
+    </div>
+    <details>
+      <summary>英語が得意でなくても参加できますか</summary>
+      <p>プログラムは段階を追う設計で、入口は全員で参加する国内の行事です。経験を積みながら進むので、最初から高い英語力が必要なわけではありません。英語の力の伸びの目安は「英語の道のり」のページでご紹介しています。</p>
+    </details>
+    <details>
+      <summary>希望者向けプログラムの募集はいつありますか</summary>
+      <p>海外研修（アイルランド・サマー、オレゴン・サマー、オランダ）は、例年2月末の告知、3月の募集説明会、4月中旬の申込締切です。アイルランド1年留学は中学3年の6月に募集説明会を開きます。詳しくは「参加のしかた」をご覧ください。</p>
+    </details>
+    <details>
+      <summary>ホームステイや現地での生活が不安です</summary>
+      <p>出発前には事前の指導やオリエンテーションを行い、現地での生活や安全面について準備します。現地では引率教員が同行し、学校と連絡を取り合える体制を整えます。</p>
+    </details>
+    <details>
+      <summary>費用はどのくらいかかりますか</summary>
+      <p>目安として、短期の海外研修は55万円台〜60万円台、国内の英語キャンプは5万円前後〜8万円程度です。アイルランド1年留学は総額約550万円で、東京都私学財団の助成（1人155万円）により実質の負担は約400万円が目安です。プログラムごとの内訳は「参加のしかた」の表をご覧ください。年度により変動するため、正確な金額は募集説明会でご案内します。</p>
+    </details>
+  </section>
+
+  <div class="closing">
+    <h2>世界は、教室の外に広がっています。</h2>
+    <p>生徒一人ひとりの「行ってみたい」が、未来を考える力になります。</p>
   </div>
-</section>
 
-<section>
-  <div class="sec-head"><span class="no">02</span><h2>行く ― 段階を追って世界へ</h2></div>
-  <div class="prose">
-    <p>部のプログラムは、距離と深さの段階になっています。入口は国内にあり、全員が一度は外の世界に触れ、意欲のある生徒はさらに遠くへ行ける。その重なりが、部の設計です。</p>
-  </div>
-  <div class="stages">
-    <div class="stage">
-      <span class="tag">中1 ・ 全員 ・ 国内</span>
-      <h3>フレッシュマンイングリッシュキャンプ</h3>
-      <p>留学生と少人数のグループで英語で過ごし、異文化理解に触れる、世界の入口です。</p>
-    </div>
-    <div class="stage">
-      <span class="tag">中2 ・ 全員 ・ 国内</span>
-      <h3>ブーストアップイングリッシュキャンプ</h3>
-      <p>ブリティッシュヒルズ（福島）での2泊3日が中1の経験を受け、TOKYO GLOBAL GATEWAYでの事前学習を経て、カナダへの準備につながります。</p>
-    </div>
-    <div class="stage">
-      <span class="tag">中3 ・ 全員 ・ 海外</span>
-      <h3>カナダ修学旅行</h3>
-      <p>「中学最終学年として英語学習の集大成」と位置づけられる旅。ホームステイと現地校交流で英語を使った生のコミュニケーションを経験し、異文化理解と今後の学習意欲につなげることが狙いです。</p>
-    </div>
-    <div class="stage">
-      <span class="tag">中2・中3 ・ 希望者 ・ 海外</span>
-      <h3>アイルランドサマープログラム</h3>
-      <p>ダブリンの語学学校でヨーロッパの生徒との混成クラスに学び、ホームステイをします。目的は英語の学習、異文化体験、国際的な視野を広げること、そしてアイルランド1年留学のイメージをつかませることにあります。</p>
-    </div>
-    <div class="stage">
-      <span class="tag">高1・高2 ・ 希望者 ・ 海外</span>
-      <h3>オレゴンサマープログラム</h3>
-      <p>他国の家庭で暮らして日常英会話の力を伸ばすプログラム。異文化理解を深めながら日本文化を相対的に見る視点を養い、他国の文化に敬意を払う態度を育てます。</p>
-    </div>
-    <div class="stage">
-      <span class="tag">高1 ・ 最大4名 ・ 海外</span>
-      <h3>アイルランド1年留学</h3>
-      <p>現地の高校の「トランジションイヤー」（入試に縛られず探究や職場体験をする移行学年）に一年間身を置き、国際経験と自立・挑戦の機会をつくります。英語力はケンブリッジでA2からB2へ、英検で2級から準1級へという到達目標を持ち、第1期生2名が2026年に出発しました。</p>
-    </div>
-    <div class="stage top">
-      <span class="tag">頂点 ・ 看板プログラム</span>
-      <h3>オランダプログラム</h3>
-      <p>この部の看板プログラムであり、目指す姿の最終ゴールのイメージです。語学研修でも観光でもホームステイ体験でもなく、生徒は「2050年問題」をテーマに英語でプレゼンテーションをし、現地の講師や学生と哲学対話をします。他のプログラムで積み上げた経験と力が、ここで一つの姿になります。</p>
-    </div>
-  </div>
-  <div class="quote">本当の教養を身に付けた国際人を育成する ― オランダプログラム実施計画書の教育目標</div>
-</section>
-
-<section>
-  <div class="sec-head"><span class="no">03</span><h2>英語は手段</h2></div>
-  <div class="prose">
-    <p>この部では英語は目的ではなく手段である。自分の考えを持ち、異なる価値観を持つ相手と英語で対話できること。検定のスコアは物差しであって、ゴールではない。生徒が世界の中で自分の考えを持ち、異なる文化や考え方を持つ人々と向き合えるようになること。そのために、行く・迎える・つながる機会を絶やさないのが、この部の仕事である。</p>
-  </div>
-</section>
-
-<section>
-  <div class="sec-head"><span class="no">04</span><h2>迎える、つながる</h2></div>
-  <div class="prose">
-    <p>行くだけではない。香港都会大学の学生の訪問受け入れ、インドネシアの高校とのオンライン交流と、将来の相互訪問の構想もある。東洋大学の留学生と英語で語り合う「Let's Chat in English!」では、希望した生徒が土曜の午後に集い、「日本と海外の文化の違い、またそれを乗り越えるためには」をテーマにディスカッションを重ね、最終回に発表する。時折、海外の大学や学校から訪問者が来校し、生徒と交流することもある。迎えること、つながり続けることで、校内にいながら異なる文化や人の考え方に触れる機会が生まれる。</p>
-  </div>
-</section>
-
-<section>
-  <div class="sec-head"><span class="no">05</span><h2>生徒に起きること</h2></div>
-  <div class="prose">
-    <p>オランダの夜の振り返りでは、生徒の「心のドア」が少しずつ開き、普段は恥ずかしくて言えないことを語り始め、涙する生徒もいる。現地で英語が通じ、歓迎されたという経験は、新しいことに挑むときの<strong>「根拠なき自信」</strong>になる。「オランダに帰りたい」と言う生徒の言葉が、この仕事を続ける理由である。</p>
-  </div>
-</section>
-
-<section>
-  <div class="sec-head"><span class="no">06</span><h2>後任に託したいこと</h2></div>
-  <div class="prose">
-    <p>プログラムの手順は業務カードに残した。託したいのは、その奥にある理由である。生徒の視野を日本の中だけに閉じず、異なる文化や考え方に触れる経験を絶やさないこと。仕事を「ただこなすもの」にしないために、この物語を生徒とも後任とも共有し続けてほしい。</p>
-  </div>
-</section>
-
-<footer class="foot">
-  国際教育推進部 引き継ぎダッシュボードの一部として作成。内容は各プログラムの実施計画書と部の記録に基づきます。「英語の道のり」（英語の力と進路の物語）と対になる、経験と視野の物語です。
-</footer>
-
-</div>`;
+  <footer class="foot">東洋大学京北中学高等学校　国際教育推進部</footer>
+</div>
+`;

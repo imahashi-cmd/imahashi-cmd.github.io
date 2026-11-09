@@ -834,3 +834,79 @@ table.yt td.yt-card{white-space:normal}
 .story-tools button{border:1.5px solid var(--accent);background:var(--panel);color:var(--accent);font:inherit;font-weight:700;padding:8px 16px;cursor:pointer;border-radius:999px;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.07)}
 .story-tools button:hover{background:var(--accent);color:#fff}
 @media print{.story-tools,.story-switch{display:none!important}}
+
+/* ==== 世界に視野を広げる（生徒・保護者向け）2026-11-09 差し替えに伴う追加 ==== */
+#v-horizon .hero-band{margin:28px 0 0;border-radius:22px;background:linear-gradient(120deg,var(--navy-deep),var(--navy) 55%,var(--teal));color:#eaf2f8;padding:30px 30px 26px;box-shadow:var(--shadow)}
+#v-horizon .hero-band .big{font-family:"Shippori Mincho B1",serif;font-size:clamp(1.25rem,3vw,1.6rem);font-weight:700;line-height:1.5}
+#v-horizon .hero-band .small{margin-top:10px;font-size:.92rem;color:#c8d8e4}
+#v-horizon .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 8px}
+#v-horizon .fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 16px 13px}
+#v-horizon .fact .num{font-family:"Fraunces",serif;font-size:1.55rem;font-weight:700;color:var(--navy);line-height:1.15}
+#v-horizon .fact .num small{font-size:.85rem}
+#v-horizon .fact .lbl{font-size:.83rem;color:var(--ink2);margin-top:4px;line-height:1.55}
+#v-horizon .fact.hl{background:var(--navy-deep);border-color:var(--navy-deep)}
+#v-horizon .fact.hl .num{color:#f2b95e}
+#v-horizon .fact.hl .lbl{color:#d7e3ee}
+#v-horizon .story{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+#v-horizon .story .main{padding:28px}
+#v-horizon .story .main p{color:var(--ink2)}
+#v-horizon .story .main p+p{margin-top:14px}
+#v-horizon .story .main strong{color:var(--ink)}
+#v-horizon .story .side{background:var(--teal-soft);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+#v-horizon .story .side h3{font-size:1.05rem;margin-bottom:10px}
+#v-horizon .story .side ul{margin:0;padding:0;list-style:none}
+#v-horizon .story .side li{padding:9px 0;border-top:1px dashed var(--line);font-size:.93rem;color:var(--ink2)}
+#v-horizon .story .side li:first-of-type{border-top:none}
+#v-horizon .story .side b{color:var(--ink)}
+#v-horizon .stages{display:flex;flex-direction:column;gap:12px}
+#v-horizon .stages::before{display:none}
+#v-horizon .stage{display:grid;grid-template-columns:110px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);padding:0;margin:0}
+#v-horizon .stage::before{display:none}
+#v-horizon .stage .when{background:var(--surface2);padding:20px 16px;text-align:center}
+#v-horizon .stage .when .grade{font-weight:900;font-size:1.05rem;color:var(--navy)}
+#v-horizon .stage .when .kind{font-size:.78rem;color:var(--muted);margin-top:2px}
+#v-horizon .stage .body{padding:20px 24px}
+#v-horizon .stage h3{font-size:1.15rem;margin:0 0 6px}
+#v-horizon .stage p{color:var(--ink2);font-size:.95rem;margin:0}
+#v-horizon .stage .tag{display:inline-block;background:var(--teal-soft);color:var(--ink);border-radius:8px;padding:2px 10px;font-weight:900;font-size:.8rem;margin-bottom:8px}
+#v-horizon .stage.flag{border-color:var(--amber)}
+#v-horizon .stage.flag .when{background:var(--amber-soft)}
+#v-horizon .stage.flag .tag{background:var(--amber-soft)}
+#v-horizon .duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+#v-horizon .duo .card{padding:26px}
+#v-horizon .duo h3{font-size:1.15rem;margin:0 0 8px}
+#v-horizon .duo p{color:var(--ink2);font-size:.95rem;margin:0}
+#v-horizon .duo p+p{margin-top:10px}
+#v-horizon .quote{background:var(--navy-deep);color:#eaf2f8;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+#v-horizon .quote .q{font-family:"Shippori Mincho B1",serif;font-size:clamp(1.15rem,2.8vw,1.45rem);font-weight:700;line-height:1.6;margin:0}
+#v-horizon .quote p{margin:14px 0 0;color:#c8d8e4;font-size:.95rem}
+#v-horizon table.costs{width:100%;border-collapse:collapse;font-size:.93rem;margin-top:6px}
+#v-horizon table.costs th,#v-horizon table.costs td{border-top:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
+#v-horizon table.costs tr:first-child th,#v-horizon table.costs tr:first-child td{border-top:none}
+#v-horizon table.costs th{color:var(--ink);white-space:nowrap;font-weight:700}
+#v-horizon table.costs td{color:var(--ink2)}
+#v-horizon table.costs .amt{white-space:nowrap;font-weight:700;color:var(--ink)}
+#v-horizon .note{font-size:.85rem;color:var(--muted);margin-top:12px}
+#v-horizon .subh{font-size:1.05rem;margin:22px 0 6px;font-family:"Shippori Mincho B1",serif}
+#v-horizon .subh:first-child{margin-top:0}
+#v-horizon .faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+#v-horizon .faq summary{font-weight:900;cursor:pointer;color:var(--ink)}
+#v-horizon .faq details p{color:var(--ink2);margin:8px 0 0;font-size:.95rem}
+#v-horizon .closing{margin:56px 0 0;background:linear-gradient(120deg,var(--navy-deep),var(--teal));border-radius:22px;color:#eaf2f8;padding:36px 30px;text-align:center}
+#v-horizon .closing h2{font-size:clamp(1.4rem,3.4vw,1.9rem);color:#fff;margin:0}
+#v-horizon .closing p{margin:10px 0 0;color:#c8d8e4;font-size:.95rem}
+@media (max-width:760px){
+  #v-horizon .facts{grid-template-columns:repeat(2,1fr)}
+  #v-horizon .story{grid-template-columns:1fr}
+  #v-horizon .duo{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  #v-horizon .stage{grid-template-columns:1fr}
+  #v-horizon .stage .when{text-align:left}
+}
+
+/* ==== 2026-11-09 補正：--navy-deep は #v-story スコープにしかなく、#v-horizon では未定義だった（濃紺背景が無効化していた） ==== */
+#v-horizon{--navy-deep:#10263f}
+#v-horizon .quote{border-left:none}
+#v-horizon .stages{padding-left:0}
+#v-horizon .pdf-dl{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px}
