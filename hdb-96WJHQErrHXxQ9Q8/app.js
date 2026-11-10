@@ -67,7 +67,7 @@ function renderTop(){
   const usedCats = Object.keys(DATA.cats).filter(k => DATA.cards.some(c => c.cat === k));
   const nextM = curM === 12 ? 1 : curM + 1;
   const isK = DATA.key === "kokusai";
-  const CATDESC = {
+  const CATDESC = isK ? {
     program: "国内で行う英語のプログラムです。キャンプや講演会などで、英語を使う機会を作ります。",
     abroad: "生徒が海外へ行くプログラムと、留学の手続きです。企画から実施、報告までを一年で回します。",
     contest: "英語スピーチや弁論のコンテストです。校内の選考から大会への参加までを担います。",
@@ -75,6 +75,11 @@ function renderTop(){
     partner: "海外の学校や大学との連携と、訪問の受け入れです。",
     event: "修学旅行や保護者会、取材への対応など、学校行事と対外対応です。",
     admin: "予算要求や部の計画、備品の管理など、部を回すための運営の仕事です。"
+  } : {
+    hr: "来年度の授業をだれが何コマ持つかを決め、非常勤講師やJETなど、人をそろえる仕事です。主任の仕事の中心です。",
+    subject: "教科会の運営、教材と予算、講習や研究授業、SSHやオンライン英会話など、教科を回すための仕事です。",
+    eval: "定期考査と成績処理、入試の作問と採点、学力推移調査、英語力DBなど、試験とデータの仕事です。",
+    event: "英語スピーチコンテストなど、英語科が関わる行事です。主催が他の部の行事は、英語科が受け持つ部分をまとめています。"
   };
   const step1 = "show('cal');setTimeout(()=>document.getElementById('topcal').scrollIntoView({behavior:'smooth'}),60)";
   const step1Text = "「年間カレンダー」のページで、この先2か月の予定と締切を見ます";
