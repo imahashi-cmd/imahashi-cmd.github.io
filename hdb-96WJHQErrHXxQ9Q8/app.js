@@ -137,7 +137,7 @@ function renderTop(){
 
     <h2>年間カレンダー（4月はじまり）</h2>
     <p class="p-stats">収録している業務は全${DATA.cards.length}件、年間の予定・締切は${EV.length}件（うち締切 ${EV.filter(x=>x.dl).length}件）、いちばん忙しいのは${busiest[0]}月（${busiest[1]}件）です。月を押すと、その月にやることが下に出ます。</p>
-    ${isK ? `<p class="yt-btnrow"><button type="button" class="yt-pdf-btn" onclick="printYear()">📄 一年間のやること一覧（PDF）</button><span class="yt-note">一年分（4月〜3月）の予定・締切を1枚の表にして、印刷／PDF保存できます。</span></p>` : ""}
+    <p class="yt-btnrow"><button type="button" class="yt-pdf-btn" onclick="printYear()">📄 一年間のやること一覧（PDF）</button><span class="yt-note">一年分（4月〜3月）の予定・締切を1枚の表にして、印刷／PDF保存できます。</span></p>
     <div class="legend">${usedCats.map(k => `<span><i style="background:${cat(k).color}"></i>${cat(k).label}</span>`).join("")}<span>◆ ＝締切</span><span>赤枠＝今月</span></div>
     <div class="ribbon">${MONTHS.map(m => {
       const es = byM(m);
@@ -211,7 +211,7 @@ function printYear(){
     if(!es.length) return "";
     return `<tr class="yt-monrow"><td colspan="3">${m}月</td></tr>` + es.map(x => `<tr><td class="yt-when">${esc(x.d||"")}</td><td class="yt-card"><span class="tag" style="background:${cat(x.card.cat).color}">${esc(x.card.name)}</span></td><td>${x.dl ? '<span class="dlmark">◆締切 </span>' : ""}${esc(x.text)}</td></tr>`).join("");
   }).join("");
-  pa.innerHTML = `<div class="print-help">🖨 印刷用レイアウトを表示しています。<button type="button" onclick="window.print()">🖨 印刷する</button><button type="button" onclick="exitPrintMode()">← ダッシュボードに戻る</button></div><div class="year-sheet"><h1>一年間のやること一覧 ― 国際教育推進部</h1><p class="yt-sub">4月はじまり。全${EV.length}件（うち締切 ${EV.filter(x=>x.dl).length}件）。詳しい手順は各業務のカードを見てください。</p><table class="yt"><thead><tr><th style="width:56px">日付</th><th style="width:170px">業務</th><th>やること</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  pa.innerHTML = `<div class="print-help">🖨 印刷用レイアウトを表示しています。<button type="button" onclick="window.print()">🖨 印刷する</button><button type="button" onclick="exitPrintMode()">← ダッシュボードに戻る</button></div><div class="year-sheet"><h1>一年間のやること一覧 ― ${esc(DATA.title)}</h1><p class="yt-sub">4月はじまり。全${EV.length}件（うち締切 ${EV.filter(x=>x.dl).length}件）。詳しい手順は各業務のカードを見てください。</p><table class="yt"><thead><tr><th style="width:56px">日付</th><th style="width:170px">業務</th><th>やること</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   document.body.classList.add("printing-card");
   window.scrollTo(0, 0);
 }
