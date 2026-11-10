@@ -561,7 +561,7 @@ const DATA = {
     ]
   },
     {
-    id: "jet", name: "JET・外国人講師", cat: "hr",
+    id: "jet", name: "JET", cat: "hr",
     lead: "JET の受け入れと、外国人講師の勤務評定・目標管理を担当する。",
     status: "現役", statusSrc: "H:2026-10-31 ユーザー回答", season: "新JET の受け入れ：夏ごと（2025年度は6月に教科会で議題）",
     summary: [
