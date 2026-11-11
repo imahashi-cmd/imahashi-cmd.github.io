@@ -232,9 +232,9 @@ th{color:var(--muted);font-weight:600;font-size:13px}
 
 /* ヘッダー内の表示切替とフッター（作成中・作成日・出典はフッターへ） */
 header.hero .wrap{position:relative}
-#theme{position:absolute;top:52px;right:16px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:8px;padding:4px 12px;font:inherit;font-size:13px;cursor:pointer}
-.hero-logo{position:absolute;top:0;right:16px;height:42px;width:auto;background:#fff;border-radius:8px;padding:4px 8px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
-@media (max-width:560px){.hero-logo{height:30px;padding:3px 6px}#theme{top:40px}}
+#theme{position:absolute;top:6px;right:338px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:8px;padding:4px 12px;font:inherit;font-size:13px;cursor:pointer}
+.hero-logo{position:absolute;top:6px;right:16px;height:30px;width:auto}
+@media (max-width:560px){.hero-logo{height:24px;top:4px}#theme{top:34px;right:16px}}
 footer.p-footer{border-top:1px solid var(--line);padding:18px 0 8px;color:var(--muted);font-size:13px}
 footer.p-footer .wrap{padding-bottom:24px}
 footer.p-footer .meta{display:flex;gap:10px;flex-wrap:wrap}
