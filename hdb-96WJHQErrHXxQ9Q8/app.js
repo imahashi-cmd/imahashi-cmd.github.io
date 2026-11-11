@@ -154,8 +154,7 @@ function renderTop(){
   const es = byM(selM).sort((a,b) => (parseInt(a.d?.split("/")[1])||99) - (parseInt(b.d?.split("/")[1])||99));
   $("#mtitle").textContent = `${selM}月にやること${selM===curM?"（今月）":""}`;
   $("#mlist").innerHTML = es.length ? es.map(x => `<li><span class="when">${esc(x.d||selM+"月")}</span>
-      <span><span class="tag" style="background:${cat(x.card.cat).color}">${esc(x.card.name)}</span>${x.dl?'<span class="dlmark">◆締切 </span>':""}${esc(x.text)} ${src(x.src)}
-      <a href="#" data-open="${x.card.id}">→カード</a></span></li>`).join("")
+      <span><a href="#" class="tag" style="background:${cat(x.card.cat).color};text-decoration:none" data-open="${x.card.id}">${esc(x.card.name)}</a>${x.dl?'<span class="dlmark">◆締切 </span>':""}${esc(x.text)} ${src(x.src)}</span></li>`).join("")
     : `<li><span></span><span style="color:var(--muted)">この月の予定は、いま収録している業務にはありません。</span></li>`;
 }
 
