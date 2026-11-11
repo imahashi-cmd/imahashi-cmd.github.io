@@ -4,7 +4,7 @@
 // 本文を直すときは単体ページ側を正本として直し、ここへ移すこと。配布用PDFの data URI は Drive のファイルへのリンクに置き換えてある。
 const STORY_HTML = `<header class="hero">
   <div class="wrap">
-    <div class="hero-kicker">国際教育推進部のストーリー</div>
+    <div class="hero-kicker">東洋大学京北中学高等学校　国際教育推進部のストーリー</div>
     <h1>高校3年間の<span class="accent">英語の道のり</span></h1>
     <p class="en">Three Years of English — Learning First, One Scale, Wider Choices</p>
     <p class="lead">本校の進路の<strong>主体は、日本の大学</strong>です。国公立大学、難関私立大学、そして東洋大学をはじめとする国内大学への進学が中心で、海外大学はその先の<strong>「上乗せ」の選択肢</strong>です。だからこそ、国内入試で広く活用される<strong>英検を、大切な目標の一つ</strong>に据え、高校1・2年は<strong>ケンブリッジ英語検定</strong>を校内で受けて力を測り、高校3年では必要に応じて<strong>IELTS</strong>を団体申込で受験できる仕組みを用意しました。ケンブリッジの受験料は<strong>全額補助で実質無料</strong>です。土台になるのは、あくまで日々の授業で育てる英語力そのものです。そのうえで英検を目標の一つにし、ケンブリッジで伸びを確かめ、IELTSで海外への扉も開く——それが本校の英語のストーリーです。</p>
