@@ -142,7 +142,6 @@ function renderTop(){
       const es = byM(m);
       return `<div class="mon ${m===curM?"now":""} ${m===selM?"sel":""}" data-m="${m}">
         <h4>${m}月</h4>
-        <div class="dots">${es.map(x => `<span class="dot ${x.dl?"dl":""}" title="${esc(x.card.name+"："+x.text)}" style="background:${cat(x.card.cat).color}"></span>`).join("")}</div>
         <div class="cnt">${es.length}件</div>
         <div class="heat" style="opacity:${.08 + .8*es.length/maxN}"></div>
       </div>`;}).join("")}
