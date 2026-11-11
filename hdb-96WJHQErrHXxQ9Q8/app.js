@@ -13,13 +13,11 @@ $("#ttl").textContent = DATA.title;
 $("#sub").textContent = DATA.sub; if(!DATA.sub) $("#sub").style.display = "none";
 $("#meta").innerHTML = DATA.meta.map(m => `<span>${esc(m)}</span>`).join("");
 
-// 出所バッジ: "D:ファイル名"=文書 / "H:日付"=聞き取り / "U"=不明
+// 出所バッジ: "U"=不明のみ表示（文書・聞き取りのバッジは2026-11-11に削除）
 function src(s){
   if(!s) return "";
   if(s === "U") return `<span class="src unk">不明</span>`;
   const [t, ...rest] = s.split(":"); const f = rest.join(":");
-  if(t === "D") return `<span class="src doc" title="${esc(f)}">文書</span>`;
-  if(t === "H") return `<span class="src hear" title="${esc(f)}">聞き取り</span>`;
   if(t === "S") return `<span class="src hear" title="${esc(f)}">提案（要確認）</span>`;
   return "";
 }
@@ -89,7 +87,7 @@ function renderTop(){
     <div class="p-statement">
       <h2>${isK ? "これは、国際教育推進部長の一年の仕事を、後任がそのまま回せるようにまとめた引き継ぎダッシュボードです。" : "これは、英語科主任の一年の仕事を、後任がそのまま回せるようにまとめた引き継ぎダッシュボードです。"}</h2>
       <p>${isK ? "部の仕事は「プログラムを年に一度まわす」ことの積み重ねです。業務ごとに、目的・手順・成果の定義・年間の予定を1枚の業務カードにまとめています。" : DATA.intro}</p>
-      <p class="p-note">文章についている <b>文書</b>＝ファイルに書いてあること、<b>聞き取り</b>＝前任者から聞いたこと、<b>不明</b>＝まだ確かめていないこと、です。</p>
+      <p class="p-note">文章についている <b>不明</b>＝まだ確かめていないこと、です。</p>
     </div>
     <h3 class="p-intro-sub">後任はまずここから</h3>
     <div class="p-steps">
