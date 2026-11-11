@@ -142,7 +142,7 @@ function renderTop(){
       const es = byM(m);
       return `<div class="mon ${m===curM?"now":""} ${m===selM?"sel":""}" data-m="${m}">
         <h4>${m}月</h4>
-        <div class="cnt">${es.length}件</div>
+        <div class="cnt" style="font-size:${(11 + 12*(maxN ? es.length/maxN : 0)).toFixed(1)}px">${es.length}件</div>
         <div class="heat" style="opacity:${.08 + .8*es.length/maxN}"></div>
       </div>`;}).join("")}
     </div>
