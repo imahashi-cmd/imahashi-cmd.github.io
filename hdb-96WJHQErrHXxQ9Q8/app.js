@@ -136,9 +136,8 @@ function renderTop(){
     <div id="topcal">
 
     <h2>年間カレンダー（4月はじまり）</h2>
-    <p class="p-stats">収録している業務は全${DATA.cards.length}件、年間の予定・締切は${EV.length}件（うち締切 ${EV.filter(x=>x.dl).length}件）、いちばん忙しいのは${busiest[0]}月（${busiest[1]}件）です。月を押すと、その月にやることが下に出ます。</p>
-    <p class="yt-btnrow"><button type="button" class="yt-pdf-btn" onclick="printYear()">📄 一年間のやること一覧（PDF）</button><span class="yt-note">一年分（4月〜3月）の予定・締切を1枚の表にして、印刷／PDF保存できます。</span></p>
-    <div class="legend">${usedCats.map(k => `<span><i style="background:${cat(k).color}"></i>${cat(k).label}</span>`).join("")}<span>◆ ＝締切</span><span>赤枠＝今月</span></div>
+    <p class="p-stats">いちばん忙しいのは${busiest[0]}月（${busiest[1]}件）です。月を押すと、その月にやることが下に出ます。</p>
+    <p class="yt-btnrow"><button type="button" class="yt-pdf-btn" onclick="printYear()">📄 一年間のやること一覧（PDF）</button></p>
     <div class="ribbon">${MONTHS.map(m => {
       const es = byM(m);
       return `<div class="mon ${m===curM?"now":""} ${m===selM?"sel":""}" data-m="${m}">
